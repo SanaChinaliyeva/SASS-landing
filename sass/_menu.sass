@@ -1,0 +1,50 @@
+@import variables  
+@import mixins
+
+
+.header
+  padding: 11px 0 7px
+
+.bars
+display: none
+
+.label-text 
+color: $color-accent
+font-size: 30px
++desktop-breakpoint
+display: none
+
+.menu
+  display: none
+  padding: 0
+  +desktop-breakpoint
+  display: block
+  &-list
+    padding: 0
+    margin: 0
+  &-item
+    list-style: none
+    display: block
+    +desktop-breakpoint
+    display: inline-block   
+  &:last-child .menu-link 
+    margin-right: 33px
+  &-link
+    color: $color-main
+    text-decoration: none
+    text-transform: uppercase
+    font-family: $font-roboto
+    font-size: $fz-regular
+    padding: 10px 0
+    margin-right: 18px
+    +desktop-breakpoint
+  &:hover  
+  color: $color-accent
+  
+.bars:checked ~ .menu
+display: block
+
+
+
+
+  

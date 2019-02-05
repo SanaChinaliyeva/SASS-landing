@@ -1,0 +1,41 @@
+@import variables
+
+.social
+  &-link
+    display: inline-block
+    text-decoration: none
+    color: $color-inverted
+    font-size: $fz-medium
+    padding: 10px 8px 13px
+    &:last-child
+      padding-right: 0
+
+.square
+  display: inline-block
+  background: $color-main
+  color: $color-inverted
+  width: 31px
+  height: 31px
+  text-align: center
+  line-height: 31px
+  font-size: 18px
+  margin-right: 15px
+
+.icon-social 
+  display: inline-block
+  width: 31px
+  height: 31px
+  margin-bottom: 7px
+  margin-right: 8px
+  background: url(../images/social-icons-sprite.png) top left no-repeat
+
+$social-icons: "rss", "fb", "twitter", "mail", "tumblr", "pinterest", "vimeo", "zerply", "picasa", "stumble", "skype", "reddit", "evernote", "behance", "driblle", "digg", "blogger", "flickr", "linkedin", "google"
+
+@function get_media($list, $number)
+    @return nth($list, $number)
+
+
+@for $i from 1 through length($social-icons)
+  .#{get_media($social-icons, $i)}
+      background-position: (($i - 1) * -38#{px}) 0
+ 

@@ -1,0 +1,57 @@
+@import normalize
+@import bootstrap-grid/bootstrap-grid
+
+@import variables
+@import mixins
+@import social
+@import menu
+@import footer
+
+body
+  font-family: $font-roboto
+  font-size: $fz-regular
+
+.m0 
+  margin: 0
+
+.bg-dark
+  background: url(../images/bg-pattern.jpg)
+
+.title-feat
+  font-size: $fz-medium
+  font-family: $font-bitter
+
+.text-feat
+  color: $color-lighter
+
+.promo
+  position: relative
+  &-title
+    font-weight: bold
+    font-family: $font-bitter
+    font-size: $fz-medium
+    text-transform: capitalize
+    position: absolute
+    top: 0
+    left: 0
+    color: $color-inverted
+    max-width: 370px
+    display: inline-block
+    &-span
+      background: rgba(0, 0, 0, 0.7)
+      margin-bottom: 2px
+      display: inline-block
+      padding: 5px 10px
+    +desktop-breakpoint
+      font-size: $fz-large
+    +tablet-breakpoint
+      left: 12.85%
+      top: 14.5%
+  &-bg
+    display: block
+    width: 100%
+    height: auto
+
+.features
+  padding: 33px 28px 7.7%
+
